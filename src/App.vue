@@ -4,10 +4,10 @@ import { ref, onMounted } from "vue";
 const blob = ref(null);
 onMounted(() => {
   document.onpointermove = (event) => {
-    const { clientX, clientY } = event;
+    const { pageX, pageY } = event;
 
     blob.value.animate(
-      { left: `${clientX}px`, top: `${clientY}px` },
+      { left: `${pageX}px`, top: `${pageY}px` },
       { duration: 3000, fill: "forwards" }
     );
   };
@@ -37,9 +37,13 @@ onMounted(() => {
 }
 
 #blur {
-  height: 100%;
-  width: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 500vh;
   z-index: 0;
   backdrop-filter: blur(12vmax);
 }

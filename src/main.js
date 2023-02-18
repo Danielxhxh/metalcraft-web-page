@@ -9,9 +9,15 @@ import "primevue/resources/primevue.min.css"; //core css
 import "primeicons/primeicons.css";
 
 import Menubar from "primevue/menubar";
+import Card from "primevue/card";
+import Button from "primevue/button";
+import Galleria from "primevue/galleria";
 
 const app = createApp(App);
 
 app.component("Menubar", Menubar);
+app.component("Card", Card);
+app.component("Button", Button);
+app.component("Galleria", Galleria);
 
 app.use(PrimeVue).use(router).mount("#app");
