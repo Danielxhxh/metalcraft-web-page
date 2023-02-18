@@ -38,12 +38,11 @@ onMounted(() => {
 
 #blur {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  margin: 0 auto 0 0;
+  padding: 0 auto 0 0;
   width: 100%;
-  height: 500vh;
+  /* height: 500vh; */
+  height: 100%;
   z-index: 0;
   backdrop-filter: blur(12vmax);
 }

@@ -7,5 +7,9 @@ export default createRouter({
       path: "/",
       component: () => import("../views/homepage.vue"),
     },
+    {
+      path: "/contact",
+      component: () => import("../views/contact-page.vue"),
+    },
   ],
 });

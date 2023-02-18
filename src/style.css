@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -34,6 +36,26 @@ h2 {
 
 h3 {
   font-size: 2em;
+}
+
+.c {
+  height: 200vh;
+  width: 960px;
+  margin: auto;
+  max-width: 95%;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #202124;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: aquamarine;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 800px) {
