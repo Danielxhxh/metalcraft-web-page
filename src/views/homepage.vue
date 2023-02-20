@@ -1,7 +1,8 @@
 <template>
   <div class="main">
     <h1>Nikolla's Metalcraft</h1>
-    <Menubar :model="menu" class="navbar" />
+    <Menubar :model="menu" class="navbar"> </Menubar>
+
     <h3>The art of metal.</h3>
 
     <p>
@@ -22,57 +23,52 @@
 
     <Features />
     <MainGalleria />
+    <Footer />
   </div>
 </template>
 
 <script setup>
 import Features from "../components/Features.vue";
 import MainGalleria from "../components/MainGalleria.vue";
+import Footer from "../components/Footer.vue";
 
 const menu = [
   {
-    label: "Edit",
-    icon: "pi pi-fw pi-pencil",
+    label: "Homepage",
+    icon: "pi pi-fw pi-home",
+    to: "/",
+  },
+  {
+    label: "Gallery",
+    icon: "pi pi-fw pi-images",
     items: [
       {
-        label: "Left",
-        icon: "pi pi-fw pi-align-left",
+        label: "Gates",
+        to: "/",
+      },
+      {
+        label: "Doors",
+        to: "/",
+      },
+      {
+        label: "Fences",
+        to: "/",
+      },
+      {
+        label: "Others",
+        to: "/",
       },
     ],
   },
   {
-    label: "Users",
-    icon: "pi pi-fw pi-user",
-  },
-  {
-    label: "Events",
-    icon: "pi pi-fw pi-calendar",
-    items: [
-      {
-        label: "Archieve",
-        icon: "pi pi-fw pi-calendar-times",
-        items: [
-          {
-            label: "Remove",
-            icon: "pi pi-fw pi-calendar-minus",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    label: "Quit",
-    icon: "pi pi-fw pi-power-off",
+    label: "Contacts",
+    icon: "pi pi-fw pi-comments",
+    to: "/contacts",
   },
 ];
 </script>
 
 <style scoped>
-.main {
-  width: 60%;
-  margin: auto;
-}
-
 .navbar {
   background-color: rgba(0, 0, 0, 0);
   border: none;

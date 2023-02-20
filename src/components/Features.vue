@@ -84,7 +84,7 @@ hr {
   background-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0),
-    mediumpurple,
+    var(--modern-secondary),
     rgba(0, 0, 0, 0)
   );
 }
@@ -96,7 +96,7 @@ hr {
 
 .logo-div {
   width: 30%;
-  color: aquamarine;
+  color: var(--modern-primary);
   text-align: center;
 }
 

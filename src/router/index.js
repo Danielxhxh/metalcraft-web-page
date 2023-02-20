@@ -8,8 +8,16 @@ export default createRouter({
       component: () => import("../views/homepage.vue"),
     },
     {
-      path: "/contact",
+      path: "/contacts",
       component: () => import("../views/contact-page.vue"),
+    },
+    {
+      path: "/gallery",
+      component: () => import("../views/gallery-page.vue"),
+    },
+    {
+      path: "/:pathMatch(.*)*",
+      component: () => import("../views/404.vue"),
     },
   ],
 });
