@@ -44,19 +44,19 @@ const menu = [
     items: [
       {
         label: "Gates",
-        to: "/",
+        to: "/gallery",
       },
       {
         label: "Doors",
-        to: "/",
+        to: "/gallery",
       },
       {
         label: "Fences",
-        to: "/",
+        to: "/gallery",
       },
       {
         label: "Others",
-        to: "/",
+        to: "/gallery",
       },
     ],
   },
@@ -94,11 +94,5 @@ const menu = [
 
 .carousel-designs:hover > img:not(:hover) {
   transform: scale(0.7); /* make the other images smaller */
-}
-
-@media screen and (max-width: 800px) {
-  .main {
-    width: 90%;
-  }
 }
 </style>

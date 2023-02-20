@@ -70,4 +70,8 @@ h3 {
   h1 {
     font-size: 3em;
   }
+
+  .main {
+    width: 90%;
+  }
 }
