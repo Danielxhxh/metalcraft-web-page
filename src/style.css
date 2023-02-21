@@ -16,7 +16,7 @@
 
   /* Modern look */
   --modern-bg: #202124;
-  --modern-primary: #b9d4f1;
+  --modern-primary: #eeeeee;
   --modern-secondary: #ffcc00;
 }
 
@@ -36,7 +36,6 @@ h1 {
 
 h2 {
   font-size: 3em;
-  margin: 2em auto 2em auto;
   color: var(--modern-secondary);
 }
 

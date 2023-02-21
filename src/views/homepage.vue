@@ -3,7 +3,7 @@
     <h1>Nikolla's Metalcraft</h1>
     <Menubar :model="menu" class="navbar"> </Menubar>
 
-    <h3>The art of metal.</h3>
+    <h3 id="y">The art of metal.</h3>
 
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti commodi
@@ -36,27 +36,30 @@ const menu = [
   {
     label: "Homepage",
     icon: "pi pi-fw pi-home",
-    to: "/",
   },
   {
     label: "Gallery",
     icon: "pi pi-fw pi-images",
     items: [
       {
-        label: "Gates",
+        label: "All",
         to: "/gallery",
+      },
+      {
+        label: "Gates",
+        to: "/gallery?q=Gates",
       },
       {
         label: "Doors",
-        to: "/gallery",
+        to: "/gallery?q=Doors",
       },
       {
         label: "Fences",
-        to: "/gallery",
+        to: "/gallery?q=Fences",
       },
       {
         label: "Others",
-        to: "/gallery",
+        to: "/gallery?q=Others",
       },
     ],
   },

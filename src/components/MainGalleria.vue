@@ -13,7 +13,7 @@
       :showItemNavigatorsOnHover="true"
       :showIndicators="true"
       :autoPlay="true"
-      :transitionInterval="10000"
+      :transitionInterval="4000"
     >
       <template #item="slotProps">
         <img

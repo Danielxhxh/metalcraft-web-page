@@ -70,7 +70,7 @@
 
 <style scoped>
 .back-chip {
-  position: absolute;
+  position: fixed;
   bottom: 5%;
   right: 5%;
   background: var(--modern-secondary);

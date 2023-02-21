@@ -13,6 +13,7 @@ import Card from "primevue/card";
 import Button from "primevue/button";
 import Galleria from "primevue/galleria";
 import Chip from "primevue/chip";
+import InputSwitch from "primevue/inputswitch";
 
 const app = createApp(App);
 
@@ -21,5 +22,6 @@ app.component("Card", Card);
 app.component("Button", Button);
 app.component("Galleria", Galleria);
 app.component("Chip", Chip);
+app.component("InputSwitch", InputSwitch);
 
 app.use(PrimeVue).use(router).mount("#app");
