@@ -35,8 +35,7 @@
         <template #item="slotProps">
           <img
             :src="slotProps.item.itemImageSrc"
-            :alt="slotProps.item.alt"
-            style="width: 100%; display: block"
+            style="width: 80%; display: block"
           />
         </template>
       </Galleria>
@@ -58,6 +57,7 @@
 <script setup>
 import { ref, watch, onMounted } from "vue";
 import { useRoute } from "vue-router";
+
 const route = useRoute();
 
 let activeIndex = ref(0);
@@ -69,97 +69,17 @@ let checkedFences = ref(true);
 let checkedGates = ref(true);
 let checkedOthers = ref(true);
 
-const AllImages = [
-  {
-    itemImageSrc: "/images/door.png",
-    type: "Door",
-  },
-  {
-    itemImageSrc:
-      "https://image.petmd.com/files/styles/863x625/public/CANS_dogsmiling_379727605.jpg",
-    type: "Gate",
-  },
-  {
-    itemImageSrc:
-      "https://pbs.twimg.com/profile_images/679414083616038913/AlN6yJdA_400x400.jpg",
-    type: "Fence",
-  },
-  {
-    itemImageSrc:
-      "https://images.unsplash.com/photo-1503785640985-f62e3aeee448?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dHJlZXN8ZW58MHx8MHx8&w=1000&q=80",
-    type: "Door",
-  },
-  {
-    itemImageSrc:
-      "https://image.petmd.com/files/styles/863x625/public/CANS_dogsmiling_379727605.jpg",
-    type: "Other",
-  },
-  {
-    itemImageSrc:
-      "https://pbs.twimg.com/profile_images/679414083616038913/AlN6yJdA_400x400.jpg",
-    type: "Other",
-  },
-  {
-    itemImageSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRemxBXu0PG6M-YaDpy-5MlNOCSQ6V2k4U77A&usqp=CAU",
-    type: "Fence",
-  },
-  {
-    itemImageSrc:
-      "https://image.petmd.com/files/styles/863x625/public/CANS_dogsmiling_379727605.jpg",
-    type: "Gate",
-  },
-  {
-    itemImageSrc:
-      "https://pbs.twimg.com/profile_images/679414083616038913/AlN6yJdA_400x400.jpg",
-    type: "Door",
-  },
-  {
-    itemImageSrc:
-      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
-    type: "Other",
-  },
-  {
-    itemImageSrc:
-      "https://image.petmd.com/files/styles/863x625/public/CANS_dogsmiling_379727605.jpg",
-    type: "Fence",
-  },
-  {
-    itemImageSrc:
-      "https://pbs.twimg.com/profile_images/679414083616038913/AlN6yJdA_400x400.jpg",
-    type: "Gate",
-  },
-  {
-    itemImageSrc:
-      "https://images.unsplash.com/photo-1503785640985-f62e3aeee448?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dHJlZXN8ZW58MHx8MHx8&w=1000&q=80",
-    type: "Door",
-  },
-  {
-    itemImageSrc:
-      "https://image.petmd.com/files/styles/863x625/public/CANS_dogsmiling_379727605.jpg",
-    type: "Gate",
-  },
-  {
-    itemImageSrc:
-      "https://pbs.twimg.com/profile_images/679414083616038913/AlN6yJdA_400x400.jpg",
-    type: "Other",
-  },
-  {
-    itemImageSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRemxBXu0PG6M-YaDpy-5MlNOCSQ6V2k4U77A&usqp=CAU",
-    type: "Fence",
-  },
-  {
-    itemImageSrc:
-      "https://image.petmd.com/files/styles/863x625/public/CANS_dogsmiling_379727605.jpg",
-    type: "Other",
-  },
-  {
-    itemImageSrc:
-      "https://pbs.twimg.com/profile_images/679414083616038913/AlN6yJdA_400x400.jpg",
-    type: "Gate",
-  },
-];
+let AllImages = ref([]);
+
+const requireFiles = import.meta.glob("/public/products/**/*.*");
+for (const path in requireFiles) {
+  if (requireFiles.hasOwnProperty(path)) {
+    AllImages.value.push({
+      itemImageSrc: path.replace("/public", ""),
+      type: path.replace("/public/products/", "").match(/(.*?)\d+/)[1],
+    });
+  }
+}
 
 onMounted(() => {
   if (Object.keys(route.query).length !== 0) {
@@ -192,7 +112,7 @@ onMounted(() => {
 watch([checkedDoors, checkedFences, checkedGates, checkedOthers], updateImages);
 
 function updateImages() {
-  images.value = AllImages.filter((image) => {
+  images.value = AllImages.value.filter((image) => {
     if (
       (checkedDoors.value && image.type === "Door") ||
       (checkedFences.value && image.type === "Fence") ||
@@ -255,7 +175,7 @@ function imageClick(index) {
 
 .grid {
   display: grid;
-  width: 70%;
+  width: 90%;
   margin: auto;
   grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: minmax(5vw, auto);

@@ -38,16 +38,13 @@ import { ref, onMounted } from "vue";
 
 const images = [
   {
-    itemImageSrc:
-      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
+    itemImageSrc: "/products/Door00.jpg",
   },
   {
-    itemImageSrc:
-      "https://image.petmd.com/files/styles/863x625/public/CANS_dogsmiling_379727605.jpg",
+    itemImageSrc: "/products/Gate1.jpg",
   },
   {
-    itemImageSrc:
-      "https://pbs.twimg.com/profile_images/679414083616038913/AlN6yJdA_400x400.jpg",
+    itemImageSrc: "/products/Door36.jpg",
   },
 ];
 const responsiveOptions = [
