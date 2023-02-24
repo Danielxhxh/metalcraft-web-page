@@ -2,7 +2,7 @@
   <div class="container">
     <img src="/images/broken-door-sign.png" alt="Brooken door meme." />
     <h2>404</h2>
-    <p>This is not the page you were looking for.</p>
+    <p>This is not the page you were looking for!</p>
   </div>
 </template>
 
@@ -23,11 +23,7 @@ h2 {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(
-    to bottom right,
-    var(--modern-bg),
-    var(--modern-primary)
-  );
+  background: var(--modern-bg);
 }
 
 @media screen and (max-width: 800px) {
