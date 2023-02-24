@@ -38,7 +38,7 @@ import { ref, onMounted } from "vue";
 
 const images = [
   {
-    itemImageSrc: "/products/Door00.jpg",
+    itemImageSrc: "/products/Door0.jpg",
   },
   {
     itemImageSrc: "/products/Gate1.jpg",

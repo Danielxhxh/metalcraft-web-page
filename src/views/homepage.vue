@@ -1,6 +1,8 @@
 <template>
   <div class="main">
-    <h1>Nikolla's Metalcraft</h1>
+    <div class="header-div">
+      <h1 style="margin-left: 25%">Nikolla's Metalcraft</h1>
+    </div>
     <Menubar :model="menu" class="navbar"> </Menubar>
 
     <h3 id="y">The art of metal.</h3>
@@ -36,6 +38,7 @@ const menu = [
   {
     label: "Homepage",
     icon: "pi pi-fw pi-home",
+    to: "/",
   },
   {
     label: "Gallery",
@@ -72,6 +75,16 @@ const menu = [
 </script>
 
 <style scoped>
+.header-div {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("https://archello.s3.eu-central-1.amazonaws.com/images/2018/01/23/636201774285263494.1516712169.5062.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10%;
+  margin-left: -50%;
+  margin-right: -50%;
+}
+
 .navbar {
   background-color: rgba(0, 0, 0, 0);
   border: none;

@@ -8,7 +8,13 @@
 
   <div class="container">
     <div class="map-div">
-      <span style="color: black">Here add the google map</span>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1027.4004398522547!2d19.548766399877223!3d41.18208981786821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134fdfe897b4d4fd%3A0x8d19a84d5066c1e3!2sSpitali%20Kavaj%C3%AB%2C%20Rruga%20Qazim%20Karriqi%203034%2C%20Kavaj%C3%AB%2C%20Albania!5e0!3m2!1sen!2s!4v1677268807965!5m2!1sen!2s"
+        style="height: 100%; width: 100%"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
     <div class="contacts-div">
       <div class="contacts">
@@ -87,7 +93,6 @@
 }
 
 .map-div {
-  background-color: white;
   width: 50%;
 }
 

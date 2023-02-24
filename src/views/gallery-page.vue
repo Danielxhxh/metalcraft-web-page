@@ -9,7 +9,6 @@
   <div class="main">
     <div class="div-options">
       <h3>Gallery</h3>
-      <div class="break" style="width: 100%"></div>
       <p>Doors</p>
       <InputSwitch v-model="checkedDoors" />
       <p>Fences</p>
@@ -189,22 +188,15 @@ function imageClick(index) {
 }
 
 @media screen and (max-width: 800px) {
-  .main {
-    flex-direction: column;
-  }
-
   .div-options {
-    width: 100%;
-    position: relative;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    width: 30%;
   }
   .div-gallery {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    width: 100%;
+    width: 70%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 </style>

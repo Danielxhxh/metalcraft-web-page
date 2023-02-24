@@ -22,7 +22,6 @@ a {
 
 .footer-basic {
   padding: 40px 0;
-  background-color: rgba(0, 0, 0, 0);
 }
 
 .footer-basic .copyright {

@@ -3,7 +3,7 @@
 
   <div class="container slide-in-left" ref="element1">
     <div class="logo-div">
-      <i class="pi pi-lock"></i>
+      <img src="/images/padlock-128.png" />
     </div>
     <div>
       <h4>Safe</h4>
@@ -23,13 +23,13 @@
       </p>
     </div>
     <div class="logo-div">
-      <i class="pi pi-shield"></i>
+      <img src="/images/shield-128.png" />
     </div>
   </div>
   <hr />
   <div class="container slide-in-left" ref="element3">
     <div class="logo-div">
-      <i class="pi pi-dollar"></i>
+      <img src="/images/banknotes-128.png" />
     </div>
     <div>
       <h4>Convenient</h4>
@@ -100,12 +100,11 @@ hr {
   text-align: center;
 }
 
-/* .logo-div > img {
+.logo-div > img {
   height: 100px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-} */
+  margin: auto;
+}
 
 .logo-div > i {
   font-size: 3em;
@@ -153,6 +152,10 @@ hr {
 @media screen and (max-width: 800px) {
   .logo-div {
     width: 60%;
+  }
+
+  .logo-div > img {
+    height: 50px;
   }
 }
 </style>
