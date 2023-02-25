@@ -22,7 +22,7 @@
     <div class="div-gallery">
       <Galleria
         :value="images"
-        v-model:activeIndex="activeIndex"
+        :activeIndex="activeIndex"
         :numVisible="7"
         containerStyle="max-width: 850px"
         :circular="true"
@@ -123,8 +123,8 @@ function updateImages() {
 }
 
 function imageClick(index) {
-  this.activeIndex = index;
-  this.displayCustom = true;
+  activeIndex.value = index;
+  displayCustom.value = true;
 }
 </script>
 
