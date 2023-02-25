@@ -1,10 +1,5 @@
 <template>
-  <Chip
-    label="Go back"
-    class="back-chip"
-    icon="pi pi-arrow-left"
-    @click="$router.push('/')"
-  />
+  <Goback />
 
   <div class="container">
     <div class="map-div">
@@ -18,7 +13,7 @@
     </div>
     <div class="contacts-div">
       <div class="contacts">
-        <h3>Contact us:</h3>
+        <h3>Na kontaktoni në:</h3>
         <table>
           <tr>
             <td>
@@ -72,16 +67,11 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import Goback from "../components/Goback.vue";
+</script>
 
 <style scoped>
-.back-chip {
-  position: fixed;
-  bottom: 5%;
-  right: 5%;
-  background: var(--modern-secondary);
-}
-
 .custom-chip {
   background: var(--modern-primary);
 }
@@ -94,6 +84,7 @@
 
 .map-div {
   width: 50%;
+  background-color: #f8f9fa;
 }
 
 .contacts-div {
@@ -114,13 +105,11 @@ a {
   color: white;
 }
 
-tr,
-.back-chip {
+tr {
   transition: all 0.2s ease-in-out;
 }
 
-tr:hover,
-.back-chip:hover {
+tr:hover {
   transform: scale(1.3);
 }
 

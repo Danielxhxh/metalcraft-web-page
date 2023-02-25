@@ -1,25 +1,27 @@
 <template>
-  <h2>Why us?</h2>
+  <h2>Përse ne?</h2>
 
   <div class="container slide-in-left" ref="element1">
     <div class="logo-div">
       <img src="/images/padlock-128.png" />
     </div>
     <div>
-      <h4>Safe</h4>
+      <h4>Të sigurta</h4>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid,
-        labore?
+        Përdorimi i materialeve cilësore dhe i teknikave rigoroze të saldimit
+        dhe instalimit plotësojnë dhe tejkalojnë standardet e sigurisë, duke
+        siguruar që klientët të mund të shijojnë bukurinë e produkteve dhe të
+        mbajnë mendjen e qetë.
       </p>
     </div>
   </div>
   <hr />
   <div class="container slide-in-right" ref="element2">
     <div class="right">
-      <h4>Durable</h4>
+      <h4>Rezistente</h4>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid,
-        labore?
+        Çdo produkt është bërë për të zgjatur në kohë, me veshje rezistente ndaj
+        motit dhe ndryshkut për të parandaluar konsumimin dhe gërryerjen.
       </p>
     </div>
     <div class="logo-div">
@@ -32,10 +34,11 @@
       <img src="/images/banknotes-128.png" />
     </div>
     <div>
-      <h4>Convenient</h4>
+      <h4>Të leverdisshme</h4>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid,
-        labore?
+        Kosto të ulëta dhe çmime konkurruese në krahasim me kompanitë më të
+        mëdha që ofrojnë produkte të personalizuara sipas kërkesave specifike të
+        klientëve.
       </p>
     </div>
   </div>

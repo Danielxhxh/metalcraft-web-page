@@ -1,21 +1,15 @@
 <template>
-  <Chip
-    label="Go back"
-    class="back-chip"
-    icon="pi pi-arrow-left"
-    @click="$router.push('/')"
-  />
-
+  <Goback />
   <div class="main">
     <div class="div-options">
-      <h3>Gallery</h3>
-      <p>Doors</p>
+      <h3>Galeria</h3>
+      <p>Dyer</p>
       <InputSwitch v-model="checkedDoors" />
-      <p>Fences</p>
+      <p>Kangjella</p>
       <InputSwitch v-model="checkedFences" />
-      <p>Gates</p>
+      <p>Porta</p>
       <InputSwitch v-model="checkedGates" />
-      <p>Others</p>
+      <p>Të tjera</p>
       <InputSwitch v-model="checkedOthers" />
     </div>
 
@@ -56,6 +50,8 @@
 <script setup>
 import { ref, watch, onMounted } from "vue";
 import { useRoute } from "vue-router";
+
+import Goback from "../components/Goback.vue";
 
 const route = useRoute();
 
@@ -129,21 +125,6 @@ function imageClick(index) {
 </script>
 
 <style scoped>
-.back-chip {
-  position: fixed;
-  bottom: 5%;
-  right: 5%;
-  background: var(--modern-secondary);
-}
-
-.back-chip {
-  transition: all 0.2s ease-in-out;
-}
-
-.back-chip:hover {
-  transform: scale(1.3);
-}
-
 .main {
   background-color: var(--modern-primary);
   width: 100%;

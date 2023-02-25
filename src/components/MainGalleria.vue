@@ -1,5 +1,5 @@
 <template>
-  <h2>Some of our greatest projects</h2>
+  <h2>Disa nga projektet tona.</h2>
   <div style="display: flex; justify-content: center">
     <Galleria
       style="border-radius: 50%"

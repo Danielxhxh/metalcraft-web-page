@@ -5,17 +5,19 @@
     </div>
     <Menubar :model="menu" class="navbar"> </Menubar>
 
-    <h3 id="y">The art of metal.</h3>
+    <h3 id="y">Arti i punimit të hekurit.</h3>
 
     <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti commodi
-      illo doloremque laborum magnam. Facilis culpa, eos illo ratione vitae
-      veritatis eveniet, magni architecto tempore rerum exercitationem odio quas
-      beatae! Minima iste ratione nostrum cupiditate, repudiandae quia sequi
-      voluptates ad, quasi quam officia sint animi odit, repellendus aperiam
-      aspernatur alias? Voluptatibus debitis commodi ullam tenetur, eligendi
-      nemo delectus natus alias inventore saepe earum? Aut, modi! Reiciendis
-      debitis maxime culpa ipsum.
+      Mirësevini në "Nikolla's Metalcraft", ku ne krenohemi me krijimin e dyerve
+      të blinduara, portave, kangjellave dhe punimeve të tjera metalike me
+      porosi që pasqyrojnë pasionin tonë për zanatin. Modelet tona variojnë nga
+      moderne dhe elegante në klasike dhe me motive, duke siguruar që çdo klient
+      të marrë një pjesë vërtet unike që i përshtatet stilit dhe nevojave të
+      tij. Ajo që na dallon ne është përkushtimi ynë ndaj punimit cilësor dhe
+      vëmendjes ndaj detajeve, duke rezultuar në produkte që jo vetëm duken
+      mahnitëse, por janë ndërtuar edhe për të rezistuar në kohë. Shfletoni
+      galerinë tonë të disa punimeve dhe zbuloni se si mund të rrisim pamjen dhe
+      sigurinë e shtëpisë ose biznesit tuaj me artin e hekurit.
     </p>
     <div class="carousel-designs">
       <img src="/images/gate.png" alt="gate design" />
@@ -36,38 +38,38 @@ import Footer from "../components/Footer.vue";
 
 const menu = [
   {
-    label: "Homepage",
+    label: "Faqja kryesore",
     icon: "pi pi-fw pi-home",
     to: "/",
   },
   {
-    label: "Gallery",
+    label: "Galeria",
     icon: "pi pi-fw pi-images",
     items: [
       {
-        label: "All",
+        label: "Të gjitha",
         to: "/gallery",
       },
       {
-        label: "Gates",
+        label: "Porta",
         to: "/gallery?q=Gates",
       },
       {
-        label: "Doors",
+        label: "Dyer të blinduara",
         to: "/gallery?q=Doors",
       },
       {
-        label: "Fences",
+        label: "Kangjella",
         to: "/gallery?q=Fences",
       },
       {
-        label: "Others",
+        label: "Të tjera",
         to: "/gallery?q=Others",
       },
     ],
   },
   {
-    label: "Contacts",
+    label: "Kontakte",
     icon: "pi pi-fw pi-comments",
     to: "/contacts",
   },

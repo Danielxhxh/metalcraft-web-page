@@ -3,7 +3,7 @@
     <footer>
       <p class="copyright">Nikolla's Metalcraft © 2023</p>
       <p class="copyright">
-        <i class="pi pi-code" style="font-size: 13px"></i> by
+        <i class="pi pi-code" style="font-size: 13px"></i> nga
         <a href="https://github.com/Danielxhxh" target="blank"
           >Daniel Xhakalliu</a
         >
